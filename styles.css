@@ -1,0 +1,144 @@
+body {
+  background-color: #006f4b; /* FIFA green */
+  font-family: Arial, sans-serif;
+  color: #ffffff; /* White text */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f8c12d; /* FIFA yellow */
+  padding: 20px;
+  text-align: center;
+  color: #003a70; /* Dark blue FIFA color */
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 5px solid #003a70;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #f8c12d;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.container {
+  background-color: #003a70; /* FIFA blue */
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+input[type="file"],
+input[type="text"],
+button,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+input[type="file"] {
+  background-color: #f8c12d;
+  color: #003a70;
+}
+
+input[type="text"] {
+  background-color: #fff;
+  color: #003a70;
+}
+
+textarea {
+  height: 200px;
+}
+
+button {
+  background-color: #f8c12d;
+  color: #003a70;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ffd700;
+}
+
+footer {
+  background-color: #003a70;
+  color: #f8c12d;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 5px solid #f8c12d;
+}
+
+.switch-container {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.switch-container label {
+  font-size: 18px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #f8c12d;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
