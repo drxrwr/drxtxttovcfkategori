@@ -2,7 +2,8 @@ document.getElementById('processFilesBtn').addEventListener('click', function() 
     const files = document.getElementById('file-input').files;
     const fileAreas = document.getElementById('file-areas');
     const startCategory = document.getElementById('startCategoryInput').value.trim().toLowerCase(); // Ambil kategori awal
-    const globalContactName = document.getElementById('globalContactNameInput').value.trim(); // Ambil nama kontak global
+    const globalContactNameInput = document.getElementById('globalContactNameInput'); // Referensi input nama kontak global
+    const globalContactName = globalContactNameInput.value.trim(); // Ambil nama kontak global
   
     fileAreas.innerHTML = ''; // Kosongkan div sebelum menambahkan textarea baru
   
@@ -35,8 +36,9 @@ document.getElementById('processFilesBtn').addEventListener('click', function() 
             generateButton.textContent = 'Generate VCF';
             generateButton.classList.add('generate-vcf-btn');
             generateButton.addEventListener('click', () => {
-                const fileContactName = globalContactName || file.name.replace('.txt', ''); // Gunakan nama file jika nama kontak kosong
-                const filename = fileNameInput.value.trim() || file.name.replace('.txt', ''); // Gunakan nama file asli jika nama file kosong
+                // Gunakan nama file jika globalContactName kosong
+                const fileContactName = globalContactName || file.name.replace('.txt', '');
+                const filename = fileNameInput.value.trim() || file.name.replace('.txt', '');
                 let vcfContent = '';
                 let contactIndex = 1;
                 let foundStartCategory = startCategory === ''; // Jika kategori kosong, mulai konversi langsung
